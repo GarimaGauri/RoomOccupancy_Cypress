@@ -1,14 +1,26 @@
 name: End-to-end tests
+
 on: push
+
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
       - name: Install dependencies
         run: npm install
+
+      # Start the application in the background
       - name: Start the application
-        run: npm start  
+        run: npm start &
+        
+      # Wait for the application to start (adjust sleep duration if needed)
+      - name: Wait for application to start
+        run: sleep 30
+
+      # Run Cypress tests
       - name: Cypress test
-        run: npx cypress run 
+        run: npx cypress run
