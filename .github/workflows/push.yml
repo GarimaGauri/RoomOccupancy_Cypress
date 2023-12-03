@@ -9,6 +9,6 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Start the application
-        run: npm start
-      - name: Cypress run
-        uses: cypress-io/github-action@v6
+        run: npm start  
+      - name: Cypress test
+        run: npx cypress run 
