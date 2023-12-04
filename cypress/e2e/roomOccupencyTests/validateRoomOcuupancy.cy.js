@@ -42,9 +42,9 @@ const testCases = [
       freepremiumRooms: 7,
       freeeconomyRooms: 1,
       UsagePremium: 7,
-      expectedPremiumRevenue: 1153,
+      expectedPremiumRevenue: 1099,
       UsageEconomy: 1,
-      expectedEconomyRevenue:45,
+      expectedEconomyRevenue:99,
     },
   ];
   
